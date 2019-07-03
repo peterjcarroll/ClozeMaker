@@ -12,6 +12,8 @@ namespace ClozeMaker
         {
             InitializeComponent();
             txtExclude.Lines = _clozeService.OptionWords.ToArray();
+            rdoExcludeWords.Checked = !_clozeService.Include;
+            rdoIncludeWords.Checked = _clozeService.Include;
         }
 
         private void TxtSource_TextChanged(object sender, EventArgs e)
@@ -22,6 +24,14 @@ namespace ClozeMaker
             _clozeService.OptionWords.Clear();
             _clozeService.OptionWords.AddRange(txtExclude.Lines);
 
+            UpdateCloze();
+        }
+
+        private void RdoExcludeWords_CheckedChanged(object sender, EventArgs e)
+        {
+            var radio = sender as RadioButton;
+
+            _clozeService.Include = !radio.Checked;
             UpdateCloze();
         }
 

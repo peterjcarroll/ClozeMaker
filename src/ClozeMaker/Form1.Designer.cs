@@ -35,6 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtExclude = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.rdoExcludeWords = new System.Windows.Forms.RadioButton();
+            this.rdoIncludeWords = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -98,15 +102,48 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 484);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Exclude words";
+            this.label3.Text = "Option words";
+            // 
+            // radioButton1
+            // 
+            this.rdoExcludeWords.AutoSize = true;
+            this.rdoExcludeWords.Checked = true;
+            this.rdoExcludeWords.Location = new System.Drawing.Point(3, 3);
+            this.rdoExcludeWords.Name = "rdoExcludeWords";
+            this.rdoExcludeWords.Size = new System.Drawing.Size(94, 17);
+            this.rdoExcludeWords.TabIndex = 6;
+            this.rdoExcludeWords.TabStop = true;
+            this.rdoExcludeWords.Text = "Exclude words";
+            this.rdoExcludeWords.UseVisualStyleBackColor = true;
+            this.rdoExcludeWords.CheckedChanged += new System.EventHandler(this.RdoExcludeWords_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.rdoIncludeWords.AutoSize = true;
+            this.rdoIncludeWords.Location = new System.Drawing.Point(105, 3);
+            this.rdoIncludeWords.Name = "rdoIncludeWords";
+            this.rdoIncludeWords.Size = new System.Drawing.Size(91, 17);
+            this.rdoIncludeWords.TabIndex = 7;
+            this.rdoIncludeWords.Text = "Include words";
+            this.rdoIncludeWords.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdoIncludeWords);
+            this.panel1.Controls.Add(this.rdoExcludeWords);
+            this.panel1.Location = new System.Drawing.Point(135, 478);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 22);
+            this.panel1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 628);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtExclude);
             this.Controls.Add(this.label2);
@@ -116,6 +153,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Cloze Maker";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +168,9 @@
       private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtExclude;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rdoExcludeWords;
+        private System.Windows.Forms.RadioButton rdoIncludeWords;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
