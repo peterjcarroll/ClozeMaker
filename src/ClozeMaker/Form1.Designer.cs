@@ -57,7 +57,7 @@
             this.txtSource.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSource.Size = new System.Drawing.Size(415, 430);
             this.txtSource.TabIndex = 1;
-            this.txtSource.TextChanged += new System.EventHandler(this.txtSource_TextChanged);
+            this.txtSource.TextChanged += new System.EventHandler(this.TxtSource_TextChanged);
             // 
             // txtCloze
             // 
@@ -91,7 +91,7 @@
             this.txtExclude.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtExclude.Size = new System.Drawing.Size(415, 118);
             this.txtExclude.TabIndex = 4;
-            this.txtExclude.Text = "ја\r\nон\r\nона\r\nте-ве\r\nне\r\nми\r\nони";
+            this.txtExclude.TextChanged += new System.EventHandler(this.TxtExclude_TextChanged);
             // 
             // label3
             // 
